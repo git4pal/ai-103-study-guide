@@ -65,6 +65,14 @@ Match **task complexity and modality** to the **right-sized model**:
 | **Best for** | Foundry-specific capabilities with OpenAI-compatible interfaces for Foundry direct models | Latest OpenAI SDK models and features with the full OpenAI API surface |
 | *(Code Example)* | ```python<br>from azure.identity import DefaultAzureCredential<br>from azure.ai.projects import AIProjectClient<br>from openai import OpenAI<br><br>project_client = AIProjectClient(<br>    credential=DefaultAzureCredential(),<br>    endpoint=FOUNDRY_PROJECT_ENDPOINT)<br><br>openai_client = project_client.get_openai_client(<br>    api_version="2024-10-21")<br>``` | ```python<br>from openai import OpenAI<br><br>openai_client = OpenAI(<br>    api_key=API_KEY_OR_TOKEN,<br>    base_url=AZURE_OPENAI_ENDPOINT)<br>``` |
 
+### Compare ChatCompletions with Responses API
+
+| Feature | ChatCompletions API | Responses API |
+| :--- | :--- | :--- |
+| **State management** | Client-side - developer stores and sends the full messages array | Server-side - API stores the thread automatically |
+| **System prompt** | First entry in messages array:<br>`{"role": "system", "content": "..."}` | Dedicated parameter:<br>`instructions="..."` |
+| **Payload per request** | Grows with conversation length | Constant - only latest input + an ID |
+| **Accessing the response** | `completion.choices[0].message.content` | `response.output_text` |
 
 ---
 
