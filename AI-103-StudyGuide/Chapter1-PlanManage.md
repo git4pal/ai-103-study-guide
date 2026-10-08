@@ -55,6 +55,17 @@ Match **task complexity and modality** to the **right-sized model**:
 - **Memory** — Foundry retains contextual information across interactions without repeated input. The Agent Framework supports pluggable memory backends including **Redis, Pinecone, Qdrant, Weaviate, Elasticsearch, and Postgres**.
 - **Tool Integration** — Foundry offers a catalog of over **1,400 tools** through public and private catalogs, plus any custom functions you define and register. Tools can be Azure services (Vision, Speech, Search, etc.), REST APIs, or custom code.
 
+### Choosing an endpoint and SDK
+
+| Endpoint | Foundry Project<br>`https://{resource-name}.services.ai.azure.com/api/projects/{project-name}` | Azure OpenAI<br>`https://{resource-name}.openai.azure.com/openai/v1` |
+| :--- | :--- | :--- |
+| **SDK** | **Microsoft Foundry SDK**<br>`pip install azure-ai-projects openai` | **OpenAI SDK**<br>`pip install openai` |
+| **Authentication** | **Microsoft Entra ID**<br>`pip install azure-identity` | **Microsoft Entra ID or API key**<br>`pip install azure-identity` |
+| **Chat API** | **Responses API**<br>Foundry direct models only | **Responses or ChatCompletions API**<br>All Foundry models |
+| **Best for** | Foundry-specific capabilities with OpenAI-compatible interfaces for Foundry direct models | Latest OpenAI SDK models and features with the full OpenAI API surface |
+| *(Code Example)* | ```python<br>from azure.identity import DefaultAzureCredential<br>from azure.ai.projects import AIProjectClient<br>from openai import OpenAI<br><br>project_client = AIProjectClient(<br>    credential=DefaultAzureCredential(),<br>    endpoint=FOUNDRY_PROJECT_ENDPOINT)<br><br>openai_client = project_client.get_openai_client(<br>    api_version="2024-10-21")<br>``` | ```python<br>from openai import OpenAI<br><br>openai_client = OpenAI(<br>    api_key=API_KEY_OR_TOKEN,<br>    base_url=AZURE_OPENAI_ENDPOINT)<br>``` |
+
+
 ---
 
 ## 1.2 Set Up AI Solutions in Foundry
