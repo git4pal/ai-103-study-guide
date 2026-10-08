@@ -36,6 +36,19 @@ Match **task complexity and modality** to the **right-sized model**:
 > [!TIP]
 > **Hybrid search** often provides the most robust results by combining precise keyword matching with semantic ranking. It is a strong default approach when requirements are uncertain.
 
+### Deployment Types and its usage
+| Deployment type | Best for |
+| :--- | :--- |
+| Global Standard | General workloads and highest quota |
+| Global Provisioned | Predictable high-throughput |
+| Global Batch | Large async jobs |
+| Data Zone Standard | EU/US data zone compliance |
+| Data Zone Provisioned | Data zone and predictable throughput |
+| Data Zone Batch | Large async jobs with data zone |
+| Standard | Regional compliance, low volume |
+| Regional Provisioned | Regional compliance and throughput |
+| Developer | Fine-tuned model evaluation only |
+
 ### Memory, Tool, and Knowledge Integration
 
 - **Foundry IQ** — A shared knowledge integration platform that multiple agents can access, delivering **citation-backed answers** grounded in enterprise or web content.
