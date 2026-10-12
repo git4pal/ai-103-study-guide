@@ -74,6 +74,16 @@ Match **task complexity and modality** to the **right-sized model**:
 | **Payload per request** | Grows with conversation length | Constant - only latest input + an ID |
 | **Accessing the response** | `completion.choices[0].message.content` | `response.output_text` |
 
+# Configure data sources
+
+| Category | Features / Badges | Data Source | Best For |
+| :--- | :--- | :--- | :--- |
+| **Indexed** | Pre-processed · High relevance · Custom | **Azure AI Search Index** | Enterprise search with custom ingestion pipelines and AI enrichment |
+| | | **SharePoint (Indexed)** | Advanced search on SharePoint content with custom query pipelines |
+| **Direct** | No index needed · Raw file access | **Azure Blob Storage** | Document files in Azure Storage — PDFs, DOCX, text, and more |
+| | | **OneLake** | Unstructured data and documents in Microsoft Fabric's unified data lake |
+| **Real-time** | Always current · Live retrieval · No data copy | **Web** | Current public information retrieved via Bing at query time |
+| | | **SharePoint (Remote)** | Live SharePoint content with Microsoft 365 governance and permissions |
 ---
 
 ## 1.2 Set Up AI Solutions in Foundry
