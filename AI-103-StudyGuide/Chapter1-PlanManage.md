@@ -74,6 +74,17 @@ Match **task complexity and modality** to the **right-sized model**:
 | **Payload per request** | Grows with conversation length | Constant - only latest input + an ID |
 | **Accessing the response** | `completion.choices[0].message.content` | `response.output_text` |
 
+### Choosing Between Foundry SDK and OpenAI SDK
+
+| Aspect | Foundry SDK | OpenAI SDK |
+| :--- | :--- | :--- |
+| **Primary Focus** | Deep integration with Foundry-specific platform capabilities | Maximum OpenAI API compatibility and code portability |
+| **Core Capabilities & Services** | • Foundry Agent Service for creating and managing AI agents<br>• Tool invocation and approval workflows<br>• Project metadata, connections, and governance | • Native support for Chat Completions, Responses, and Images APIs<br>• Minimal dependency on Foundry-specific concepts |
+| **Model Support** | Foundry direct models (non-Azure OpenAI models available via the model catalog) | Models compatible with the standard OpenAI API surface |
+| **Evaluation & Observability** | • Cloud evaluations for testing and validating AI responses<br>• Built-in tracing and observability for application monitoring | Relies on standard OpenAI tooling or third-party observability solutions |
+| **Portability & Integration** | Best for applications deeply coupled to Azure/Foundry infrastructure | High portability between standard OpenAI and Azure OpenAI deployments |
+| **Recommended Use Cases** | Building multi-agent systems, automated workflows, enterprise governance, or apps requiring native evaluations | Migrating existing OpenAI codebases, lightweight API calls, or multi-cloud deployments |
+
 # Configure data sources
 
 | Category | Features / Badges | Data Source | Best For |
