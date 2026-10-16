@@ -36,8 +36,7 @@ Match **task complexity and modality** to the **right-sized model**:
 > [!TIP]
 > **Hybrid search** often provides the most robust results by combining precise keyword matching with semantic ranking. It is a strong default approach when requirements are uncertain.
 
-### Deployment Types and its usage
-# Azure AI Foundry Deployment Types and When to Use Them
+### Azure AI Foundry Deployment Types and When to Use Them
 
 | Deployment Type | Best For | Best Fit (Explained Simply) | Simple Example |
 |----------------|----------|-----------------------------|----------------|
