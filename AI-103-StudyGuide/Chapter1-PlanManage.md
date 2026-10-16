@@ -37,17 +37,66 @@ Match **task complexity and modality** to the **right-sized model**:
 > **Hybrid search** often provides the most robust results by combining precise keyword matching with semantic ranking. It is a strong default approach when requirements are uncertain.
 
 ### Deployment Types and its usage
-| Deployment type | Best for |
-| :--- | :--- |
-| Global Standard | General workloads and highest quota |
-| Global Provisioned | Predictable high-throughput |
-| Global Batch | Large async jobs |
-| Data Zone Standard | EU/US data zone compliance |
-| Data Zone Provisioned | Data zone and predictable throughput |
-| Data Zone Batch | Large async jobs with data zone |
-| Standard | Regional compliance, low volume |
-| Regional Provisioned | Regional compliance and throughput |
-| Developer | Fine-tuned model evaluation only |
+# Azure AI Foundry Deployment Types and When to Use Them
+
+| Deployment Type | Best For | Best Fit (Explained Simply) | Simple Example |
+|----------------|----------|-----------------------------|----------------|
+| **Global Standard** | General workloads and highest quota | Default choice for most applications. Azure automatically scales globally and provides the largest available capacity. | A customer support chatbot used by customers around the world. |
+| **Global Provisioned** | Predictable high-throughput | Reserve dedicated capacity when you expect consistent, high traffic and need predictable response times. | A Black Friday shopping assistant handling thousands of requests per minute. |
+| **Global Batch** | Large async jobs | Most cost-effective option for huge workloads that do not require immediate responses. | Processing 5 million customer reviews overnight. |
+| **Data Zone Standard** | EU/US data-zone compliance | Similar to Global Standard, but ensures data stays within a specific data zone (EU or US). | An EU customer-service chatbot where customer data must remain in the EU. |
+| **Data Zone Provisioned** | Data zone and predictable throughput | Use when you need both compliance requirements and guaranteed performance. | An EU e-commerce assistant supporting seasonal flash-sale traffic. |
+| **Data Zone Batch** | Large async jobs with data-zone requirements | Best for large-scale batch processing while meeting data-residency requirements. | Overnight sentiment analysis of EU customer reviews. |
+| **Standard (Regional)** | Regional compliance, low volume | Keep workloads within a specific Azure region. Suitable for smaller traffic volumes. | An internal HR assistant used only by employees in East US. |
+| **Regional Provisioned** | Regional compliance and throughput | Dedicated capacity in a specific Azure region with predictable performance. | A healthcare application that must remain in a specific region and handle heavy traffic. |
+| **Developer** | Fine-tuned model evaluation only | Low-cost environment for testing and evaluating fine-tuned models before production deployment. | A data science team testing a newly fine-tuned claims-processing model. |
+
+---
+
+# Quick Decision Guide
+
+| Requirement | Recommended Deployment Type |
+|------------|----------------------------|
+| General-purpose production chatbot | **Global Standard** |
+| Highest scale with no compliance restrictions | **Global Standard** |
+| Consistent heavy traffic with predictable performance | **Global Provisioned** |
+| Millions of records processed overnight | **Global Batch** |
+| EU/US data residency requirement | **Data Zone Standard** |
+| EU/US data residency + guaranteed throughput | **Data Zone Provisioned** |
+| EU/US data residency + overnight batch jobs | **Data Zone Batch** |
+| Must stay in a specific Azure region | **Standard (Regional)** |
+| Specific region + guaranteed throughput | **Regional Provisioned** |
+| Testing fine-tuned models | **Developer** |
+
+---
+
+# Easy Memory Tricks
+
+| Keyword | Meaning |
+|----------|---------|
+| **Standard** | Shared capacity, pay-as-you-go |
+| **Provisioned** | Reserved capacity, predictable performance |
+| **Batch** | Large asynchronous workloads, lower cost |
+| **Global** | Maximum scale across Azure infrastructure |
+| **Data Zone** | Data remains within a geographic zone (EU/US) |
+| **Regional** | Data remains in a specific Azure region |
+| **Developer** | Testing and evaluation only |
+
+---
+
+# Certification Exam Cheatsheet
+
+| Scenario | Answer |
+|-----------|--------|
+| "Normal chatbot" | **Global Standard** |
+| "Highest quota available" | **Global Standard** |
+| "Predictable flash-sale traffic" | **Global Provisioned** |
+| "Analyze millions of reviews overnight" | **Global Batch** |
+| "EU compliance" | **Data Zone Standard** |
+| "EU compliance + flash-sale traffic" | **Data Zone Provisioned** |
+| "EU compliance + overnight processing" | **Data Zone Batch** |
+| "Healthcare/Government regulation requiring a specific Azure region" | **Regional Standard or Regional Provisioned** |
+| "Evaluate a fine-tuned model" | **Developer** |
 
 ### Memory, Tool, and Knowledge Integration
 
