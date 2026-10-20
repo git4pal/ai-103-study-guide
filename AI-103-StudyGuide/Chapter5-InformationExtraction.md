@@ -83,10 +83,10 @@ Content Understanding supports building **custom analyzers** that combine multip
 5. **Monitor** ingestion quality and search relevance continuously (see Chapter 1 Section 1.3 for monitoring guidance)
 
 ### Configuration
-OCR only → prebuilt-read
-Tables, structure, sections, layout preservation → prebuilt-layout
-Schema discovery → prebuilt-documentFieldSchema
-RAG ingestion/search → prebuilt-documentSearch
+- OCR only → prebuilt-read
+- Tables, structure, sections, layout preservation → prebuilt-layout
+- Schema discovery → prebuilt-documentFieldSchema
+- RAG ingestion/search → prebuilt-documentSearch
 
 ---
 
