@@ -362,6 +362,50 @@ workflow = (
 | **Group Chat** | Star (orchestrator center) | All see shared conversation | Iterative refinement | *"collaborative, roundtable"* |
 | **Magentic** | Manager + workers | Manager assigns dynamically | Complex open-ended goals | *"dynamic planning, task ledger"* |
 
+### Evaluators
+
+# Microsoft Foundry RAG Evaluators Cheat Sheet
+
+| Evaluator | Category | Purpose | Use When | Output |
+|------------|------------|----------|----------|----------|
+| Retrieval | RAG Process Evaluation | Measures how relevant the retrieved context is for answering the user's query. | You want to verify that the search/retrieval layer returns the correct content for the question. | Pass/Fail (based on threshold) |
+| Document Retrieval | RAG Process Evaluation | Compares retrieved documents against labeled ground-truth documents and calculates retrieval quality metrics. | You have labeled expected retrieval results and need precise retrieval evaluation. | Fidelity, NDCG, XDCG, Max Relevance, Holes + Pass/Fail |
+| Groundedness | RAG System Evaluation | Verifies that generated responses are supported by the retrieved source content and do not contain unsupported claims. | You want to detect hallucinations or unsupported statements. | Score (1–5) + Pass/Fail |
+| Groundedness Pro | RAG System Evaluation | Performs strict groundedness validation using Azure AI Content Safety. | You need stronger hallucination detection without requiring a model deployment. | True/False |
+| Relevance | RAG System Evaluation | Measures whether the final response answers the user's query accurately and appropriately. | You want to assess answer quality relative to the user question. | Score (1–5) + Pass/Fail |
+| Response Completeness | RAG System Evaluation | Measures whether the response includes all expected information from the ground truth. | You want to identify missing information in generated answers. | Score (1–5) + Pass/Fail |
+
+---
+
+# Frequently Tested AI-103 Scenarios
+
+| Requirement | Evaluator |
+|------------|------------|
+| Detect hallucinations / unsupported claims | Groundedness |
+| Verify retrieved context matches expected documents (ground truth available) | Document Retrieval |
+| Verify retrieved context is relevant (no ground truth available) | Retrieval |
+| Ensure response answers the question | Relevance |
+| Ensure response contains all expected information | Response Completeness |
+| CI/CD fail if retrieval quality degrades | Retrieval or Document Retrieval |
+| CI/CD fail if responses hallucinate | Groundedness |
+| Validate search quality in a RAG pipeline | Retrieval |
+| Compare retrieved documents against labeled datasets | Document Retrieval |
+| Check whether generated content is supported by retrieved sources | Groundedness |
+| Measure user-query satisfaction | Relevance |
+| Measure answer recall versus expected answer | Response Completeness |
+
+---
+
+# AI-103 Exam Mapping
+
+| Scenario | Correct Evaluator |
+|----------|------------------|
+| Responses include claims not supported by retrieved content | Groundedness |
+| Retrieved content does not align with expected labeled context | Retrieval |
+| Retrieved documents should match known ground-truth documents | Document Retrieval |
+| Ensure answer stays within provided source material | Groundedness |
+| Ensure answer fully covers expected information | Response Completeness
+
 ---
 
 **← Previous:** Chapter1-PlanManage.md | **README.md** | **Next →** Chapter3-ComputerVision.md
