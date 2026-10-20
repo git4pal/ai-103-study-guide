@@ -102,6 +102,16 @@ This attack occurs when malicious text is embedded within images (e.g., "ignore 
 
 Enforcement actions include: applying **watermarks** to AI-generated content for transparency, **flagging prohibited symbols** or brand logos, and **upholding brand usage requirements**.
 
+### Important Points
+#### input_fidelity
+When you see requirements such as:
+
+Preserve a product, logo, or subject
+Maintain visual characteristics from a reference image
+Keep identity consistent across generated images
+
+Choose input_fidelity = high
+
 ---
 
 **← Previous:** Chapter2-GenerativeAgents.md | **README.md** | **Next →** Chapter4-TextAnalysis.md
