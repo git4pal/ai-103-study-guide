@@ -82,6 +82,12 @@ Content Understanding supports building **custom analyzers** that combine multip
 4. **Connect** the search index to agents via Foundry IQ for citation-backed retrieval
 5. **Monitor** ingestion quality and search relevance continuously (see Chapter 1 Section 1.3 for monitoring guidance)
 
+### Configuration
+OCR only → prebuilt-read
+Tables, structure, sections, layout preservation → prebuilt-layout
+Schema discovery → prebuilt-documentFieldSchema
+RAG ingestion/search → prebuilt-documentSearch
+
 ---
 
 **← Previous:** Chapter4-TextAnalysis.md | **README.md** | **Next →** Appendix-Resources.md
