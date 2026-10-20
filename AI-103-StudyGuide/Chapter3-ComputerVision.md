@@ -105,10 +105,9 @@ Enforcement actions include: applying **watermarks** to AI-generated content for
 ### Important Points
 #### input_fidelity
 When you see requirements such as:
-
-Preserve a product, logo, or subject
-Maintain visual characteristics from a reference image
-Keep identity consistent across generated images
+- Preserve a product, logo, or subject
+- Maintain visual characteristics from a reference image
+- Keep identity consistent across generated images
 
 Choose input_fidelity = high
 
