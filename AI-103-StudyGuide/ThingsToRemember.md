@@ -109,6 +109,13 @@ Choose input_fidelity = high
 ### Image moderation
 Image moderation is designed to automatically analyze uploaded images for harmful content and classify them into safety categories with severity levels. You can then configure the system to block content based on those severity thresholds before the images are processed by your application.
 
+### Formula
+
+```
+$$\text{Precision} = \frac{\text{True Positives}}{\text{True Positives} + \text{False Positives}}$$
+```
+
+
 # Speech
 ### Services
 - Live audio → text = Real-time Speech-to-Text
