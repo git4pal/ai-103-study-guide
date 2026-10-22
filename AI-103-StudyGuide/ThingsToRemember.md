@@ -122,3 +122,9 @@ Text Split is used to chunk large documents into smaller passages suitable for i
 
 ### Azure OpenAI Embedding
 Azure OpenAI Embedding generates vector embeddings for those chunks, enabling vector similarity search and semantic retrieval.
+
+### Evalautors
+- Groundedness: measures whether the generated response is supported by the retrieved context and detects content that is not grounded in the source documents.
+- Retrieval: assesses the quality and relevance of the retrieved context for a query. It is designed to evaluate whether retrieval results match the expected grounding data and is part of the RAG evaluation triad
+- Fluency: Measures readability and language quality
+- Response Completeness: Measures whether the response includes all expected information
