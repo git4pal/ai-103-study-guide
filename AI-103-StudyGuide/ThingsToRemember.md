@@ -115,6 +115,19 @@ Image moderation is designed to automatically analyze uploaded images for harmfu
 
 ![Recall Formula](https://latex.codecogs.com/svg.latex?\text{Recall}=\frac{\text{True%20Positives}}{\text{True%20Positives}+\text{False%20Negatives}})
 
+### Project Type vs Domains
+| Requirement | Project Type | Domain |
+|-------------|-------------|---------|
+| Cat vs Dog Classification | Classification | General |
+| Defective vs Good Product | Classification | General |
+| Locate Defect Position | Object Detection | General |
+| Famous Buildings / Landmarks | Classification | Landmarks |
+| Restaurant Dishes / Food Recognition | Classification | Food |
+| Shopping Catalog Products | Classification | Retail |
+| Detect Company Logos | Object Detection | Logo |
+| Retail Shelf Inventory | Object Detection | Products on Shelves |
+| Offline / Edge Deployment | Any Project Type | Compact Domain |
+
 # Speech
 ### Services
 - Live audio → text = Real-time Speech-to-Text
