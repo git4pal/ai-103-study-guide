@@ -116,3 +116,9 @@ Image moderation is designed to automatically analyze uploaded images for harmfu
 
 ### Advanced data parsing
 Advanced data parsing is specifically intended for complex documents and uses layout-aware processing to preserve document structure, including headings, tables, and metadata, while supporting OCR for scanned content. This creates higher-quality chunks for RAG retrieval
+
+### Text Split
+Text Split is used to chunk large documents into smaller passages suitable for indexing and embedding generation. It is commonly used before vectorization in RAG pipelines.
+
+### Azure OpenAI Embedding
+Azure OpenAI Embedding generates vector embeddings for those chunks, enabling vector similarity search and semantic retrieval.
