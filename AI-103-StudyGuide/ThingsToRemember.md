@@ -111,10 +111,9 @@ Image moderation is designed to automatically analyze uploaded images for harmfu
 
 ### Formula
 
-```
-$$\text{Precision} = \frac{\text{True Positives}}{\text{True Positives} + \text{False Positives}}$$
-```
+![Precision Formula](https://latex.codecogs.com/svg.latex?\text{Precision}=\frac{\text{True%20Positives}}{\text{True%20Positives}+\text{False%20Positives}})
 
+![Recall Formula](https://latex.codecogs.com/svg.latex?\text{Recall}=\frac{\text{True%20Positives}}{\text{True%20Positives}+\text{False%20Negatives}})
 
 # Speech
 ### Services
