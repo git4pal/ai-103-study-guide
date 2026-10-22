@@ -97,10 +97,22 @@ When you see requirements such as:
 - Keep identity consistent across generated images
 Choose input_fidelity = high
 
+### Image moderation
+Image moderation is designed to automatically analyze uploaded images for harmful content and classify them into safety categories with severity levels. You can then configure the system to block content based on those severity thresholds before the images are processed by your application.
+
+# Speech
+### Services
+- Live audio → text = Real-time Speech-to-Text
+- Text → spoken response = Text-to-Speech
+- Recorded audio files = Batch Transcription
+- Audio translated to another language = Speech Translation
+
 # Content Understanding
 ### Analyzers
  - OCR only → prebuilt-read
  - Tables, structure, sections, layout preservation → prebuilt-layout
  - Schema discovery → prebuilt-documentFieldSchema
-RAG ingestion/search → prebuilt-documentSearch
+ - RAG ingestion/search → prebuilt-documentSearch
 
+### Advanced data parsing
+Advanced data parsing is specifically intended for complex documents and uses layout-aware processing to preserve document structure, including headings, tables, and metadata, while supporting OCR for scanned content. This creates higher-quality chunks for RAG retrieval
