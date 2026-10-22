@@ -1,3 +1,12 @@
+# Memory
+
+| Scope | Behavior |
+|-------|----------|
+| session | Memory exists only for the current session ✅ |
+| {{$conversationId}} | Memory tied to a conversation/thread |
+| {{$userId}} | Memory persists across sessions for a user |
+| global | Shared/global memory |
+
 # Deployment Types
 
 ### Quick Decision Guide
