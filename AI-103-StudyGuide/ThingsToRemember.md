@@ -99,6 +99,9 @@
 ### Spotlighting 
 Spotlighting marks and separates untrusted third-party content so the model treats it as lower-trust data, helping defend against indirect prompt injection attacks embedded in documents or images.
 
+### Prompt Shields vs Spotlighting 
+Prompt Shields for Documents acts as a detection system that scans and blocks hidden attacks, while Spotlighting transforms the document's content to reduce the AI model's trust in it.
+
 ### input_fidelity
 When you see requirements such as:
 - Preserve a product, logo, or subject
