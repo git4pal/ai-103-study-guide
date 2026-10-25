@@ -112,6 +112,20 @@ Choose input_fidelity = high
 ### Image moderation
 Image moderation is designed to automatically analyze uploaded images for harmful content and classify them into safety categories with severity levels. You can then configure the system to block content based on those severity thresholds before the images are processed by your application.
 
+### Spatial Analysis
+
+Requirements:
+ - Monitor a live video stream
+ - Determine whether more than one person is present
+ - Detect occupancy/presence
+- Minimize development effort
+
+Designed to analyze video streams and can:
+- Detect people
+- Count people
+- Track movement
+- Monitor occupancy in an area
+
 ### Formula
 
 ![Precision Formula](https://latex.codecogs.com/svg.latex?\text{Precision}=\frac{\text{True%20Positives}}{\text{True%20Positives}+\text{False%20Positives}})
