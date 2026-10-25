@@ -159,3 +159,23 @@ Azure OpenAI Embedding generates vector embeddings for those chunks, enabling ve
 - Retrieval: assesses the quality and relevance of the retrieved context for a query. It is designed to evaluate whether retrieval results match the expected grounding data and is part of the RAG evaluation triad
 - Fluency: Measures readability and language quality
 - Response Completeness: Measures whether the response includes all expected information
+
+# OCR and Document Processing Decision Guide
+
+| Requirement | Recommended Service |
+|-------------|---------------------|
+| OCR from images/scanned pages | ✅ Read API |
+| Extract text from photographs | ✅ Read API |
+| Extract text from PDFs | ✅ Read API or Document Intelligence |
+| Extract fields from invoices | ✅ Document Intelligence |
+| Extract fields from receipts | ✅ Document Intelligence |
+| Extract fields from forms | ✅ Document Intelligence |
+| Extract tables from documents | ✅ Document Intelligence |
+| Image tagging | ✅ Vision Image Analysis |
+| Image caption generation | ✅ Vision Image Analysis |
+| Object detection in images | ✅ Vision Image Analysis |
+| Sentiment analysis | ✅ Language |
+| Named Entity Recognition (NER) | ✅ Language |
+| Key phrase extraction | ✅ Language |
+| Language detection | ✅ Language |
+| Question Answering | ✅ Language |
