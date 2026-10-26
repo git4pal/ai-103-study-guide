@@ -62,7 +62,34 @@
 | **Authentication** | **Microsoft Entra ID**<br>`pip install azure-identity` | **Microsoft Entra ID or API key**<br>`pip install azure-identity` |
 | **Chat API** | **Responses API**<br>Foundry direct models only | **Responses or ChatCompletions API**<br>All Foundry models |
 | **Best for** | Foundry-specific capabilities with OpenAI-compatible interfaces for Foundry direct models | Latest OpenAI SDK models and features with the full OpenAI API surface |
-| *(Code Example)* | ```python<br>from azure.identity import DefaultAzureCredential<br>from azure.ai.projects import AIProjectClient<br>from openai import OpenAI<br><br>project_client = AIProjectClient(<br>    credential=DefaultAzureCredential(),<br>    endpoint=FOUNDRY_PROJECT_ENDPOINT)<br><br>openai_client = project_client.get_openai_client(<br>    api_version="2024-10-21")<br>``` | ```python<br>from openai import OpenAI<br><br>openai_client = OpenAI(<br>    api_key=API_KEY_OR_TOKEN,<br>    base_url=AZURE_OPENAI_ENDPOINT)<br>``` |
+
+### Code Example
+#### Foundry Code
+```python
+from azure.identity import DefaultAzureCredential
+from azure.ai.projects import AIProjectClient
+from openai import OpenAI
+
+project_client = AIProjectClient(
+    credential=DefaultAzureCredential(),
+    endpoint=FOUNDRY_PROJECT_ENDPOINT
+)
+
+openai_client = project_client.get_openai_client(
+    api_version="2024-10-21"
+)
+```
+
+#### OpenAI
+```python
+from openai import OpenAI
+
+openai_client = OpenAI(
+    api_key=API_KEY_OR_TOKEN,
+    base_url=AZURE_OPENAI_ENDPOINT
+)
+```
+
 
 ### Compare ChatCompletions with Responses API
 
