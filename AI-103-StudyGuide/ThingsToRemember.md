@@ -134,6 +134,7 @@ When you see requirements such as:
 - Preserve a product, logo, or subject
 - Maintain visual characteristics from a reference image
 - Keep identity consistent across generated images
+
 Choose input_fidelity = high
 
 ### Image moderation
